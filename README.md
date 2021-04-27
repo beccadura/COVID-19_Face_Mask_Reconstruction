@@ -29,20 +29,26 @@
 ## Train Face Mask Segmentation Model
 
 ```
-python train.py segm
+python3 train.py segm
 ```
 
 ## Train Face Mask Reconstruction Model
 
 ```
-python train.py facemask
+python3 train.py facemask
 ```
 
 
-## Predict Image Outputs
+## Predict Image Outputs (prints comparison with masked image, binary image overlayed over masked image, reconstructed image, & ground truth)
 
 ```
-python infer.py
+python3 infer.py
+```
+
+## Predict Image Outputs (prints jpg of reconstructed image only)
+
+```
+python3 infer_jpgs.py
 ```
 
 ## Paper References:

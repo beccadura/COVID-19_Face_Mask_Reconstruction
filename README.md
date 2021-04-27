@@ -1,34 +1,43 @@
 # Face Mask Reconstruction
 
 ## Download
-- Training Raw Video: https://drive.google.com/uc?id=1smUOu5MzR_7khwz1sdJTw6MlehnZo4fj&export=download
-- Testing Raw Video: https://drive.google.com/uc?id=1vNBAJvIqAVAQkbIw-TvUffhMf1aifUlG&export=download
+- Training Raw Video (needs to be placed in /datasets/Dataset1-David-baseline/train/raw): https://drive.google.com/uc?id=1smUOu5MzR_7khwz1sdJTw6MlehnZo4fj&export=download
+- Testing Raw Video (needs to be placed in /datasets/Dataset1-David-baseline/test/raw): https://drive.google.com/uc?id=1vNBAJvIqAVAQkbIw-TvUffhMf1aifUlG&export=download
 
 ## CelebA data was prepared as follows:
 
-  - Downloaded CelebA dataset then cropped the image to 512x512 pixels
+  - Downloaded CelebA dataset (https://www.kaggle.com/jessicali9530/celeba-dataset) then cropped the image to 512x512 pixels
   - Reduced size of dataset, as model takes a while to train
-  - Created synthetic face mask and binary image on the cropped set with code adapted from [here](https://github.com/aqeelanwar/MaskTheFace) 
-  
-## Training steps:
-- Train segmentation model in ***segmentation_trainer.py***
-- Train inpainting model in ***reconstruction_trainer.py***
-- Using ***infer.py*** with 2 checkpoints from above tasks to do inference
+  - Created synthetic face mask and binary image on the cropped set with code adapted from [here](https://github.com/aqeelanwar/MaskTheFace)
 
-## Train face mask segmentation
+## Dataset1-David-baseline data was prepared as follows:
+
+  - Split training and testing videos into images (1 frame per second)
+  - Extracted audio from videos
+  - Reduced size of training dataset, as model takes a while to train
+  - Cropped images to be 512x512 pixels
+  - Created synthetic face mask and binary image on the cropped set with code adapted from [here](https://github.com/aqeelanwar/MaskTheFace)
+  
+## Training Steps:
+- Download raw videos from links above (they are too large to be pushed to GitHub) and place them in correct file locations.
+- Train segmentation model in ***segmentation_trainer.py***.
+- Train reconstruction model in ***reconstruction_trainer.py***.
+- Use ***infer.py*** with final weights files from training the segmentation and reconstruction models to make predictions.
+
+## Train Face Mask Segmentation Model
 
 ```
 python train.py segm
 ```
 
-## Train face mask reconstruction
+## Train Face Mask Reconstruction Model
 
 ```
 python train.py facemask
 ```
 
 
-## Get results
+## Predict Image Outputs
 
 ```
 python infer.py

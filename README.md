@@ -23,6 +23,7 @@
 - Train segmentation model in ***segmentation_trainer.py***.
 - Train reconstruction model in ***reconstruction_trainer.py***.
 - Use ***infer.py*** with final weights files from training the segmentation and reconstruction models to make predictions.
+- If you just want to output the reconstructed images, use ***infer_jpgs.py*** instead of ***infer.py***.
 
 ## Train Face Mask Segmentation Model
 

@@ -1,4 +1,4 @@
-# Face Mask Reconstruction
+# Face Mask Reconstruction (Proposed Model)
 ## Authors: Becca Dura, David Kinney, Linda Kopecky, & Evgeni Radichev
 
 ## Download

@@ -1,4 +1,5 @@
 # Face Mask Reconstruction
+## Authors: Becca Dura, David Kinney, Linda Kopecky, & Evgeni Radichev
 
 ## Download
 - Training Raw Video (needs to be placed in /datasets/Dataset1-David-baseline/train/raw): https://drive.google.com/uc?id=1smUOu5MzR_7khwz1sdJTw6MlehnZo4fj&export=download

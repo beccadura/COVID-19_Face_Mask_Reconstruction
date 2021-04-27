@@ -1,8 +1,8 @@
 # Face Mask Reconstruction
 
 ## Download
-Training Raw Video: https://drive.google.com/uc?id=1smUOu5MzR_7khwz1sdJTw6MlehnZo4fj&export=download
-Testing Raw Video: https://drive.google.com/uc?id=1vNBAJvIqAVAQkbIw-TvUffhMf1aifUlG&export=download
+- Training Raw Video: https://drive.google.com/uc?id=1smUOu5MzR_7khwz1sdJTw6MlehnZo4fj&export=download
+- Testing Raw Video: https://drive.google.com/uc?id=1vNBAJvIqAVAQkbIw-TvUffhMf1aifUlG&export=download
 
 ## CelebA data was prepared as follows:
 
@@ -15,16 +15,23 @@ Testing Raw Video: https://drive.google.com/uc?id=1vNBAJvIqAVAQkbIw-TvUffhMf1aif
 - Train inpainting model in ***reconstruction_trainer.py***
 - Using ***infer.py*** with 2 checkpoints from above tasks to do inference
 
-## Train facemask segmentation
+## Train face mask segmentation
 
 ```
 python train.py segm
 ```
 
-## Train facemask inpainting
+## Train face mask reconstruction
 
 ```
 python train.py facemask
+```
+
+
+## Get results
+
+```
+python infer.py
 ```
 
 ## Paper References:

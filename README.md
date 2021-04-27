@@ -39,13 +39,15 @@ python3 train.py facemask
 ```
 
 
-## Predict Image Outputs (prints comparison with masked image, binary image overlayed over masked image, reconstructed image, & ground truth)
+## Predict Image Outputs 
+#### (prints comparison with masked image, binary image overlayed over masked image, reconstructed image, & ground truth)
 
 ```
 python3 infer.py
 ```
 
-## Predict Image Outputs (prints jpg of reconstructed image only)
+## Predict Image Outputs 
+#### (prints jpg of reconstructed image only)
 
 ```
 python3 infer_jpgs.py
